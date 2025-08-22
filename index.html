@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soniya Enterprise — Industrial Chemicals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Soniya Enterprise</a>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Reliable Chemical Solutions for Industry</h1>
+          <p>Water treatment, dosing systems, and specialty chemicals — trusted by top-tier vendors.</p>
+          <a class="btn" href="#products">Explore Products</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="./uploads/image1.jpg" alt="Chemical can"  style="height: 250px; width: 300px;">
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container products">
+      <h2>Our Products</h2>
+      <div class="grid">
+        <div class="item">
+          <img src="./uploads/image2.jpg" alt="Cooling tower chemical can"  style="height: 250px; width: 300px;>
+          <!doctype html>
+          <html lang="en">
+
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <title>Soniya Enterprise — Industrial Chemicals</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+              }
+
+              .grid {
+                display: flex;
+                gap: 20px;
+              }
+
+              .item {
+                border: 1px solid #ddd;
+                padding: 15px;
+                border-radius: 10px;
+                width: 250px;
+                cursor: pointer;
+                transition: 0.3s;
+              }
+
+              .item:hover {
+                background: #f8f8f8;
+              }
+
+              #infoBox {
+                margin-top: 20px;
+                padding: 15px;
+                border: 2px solid #007bff;
+                border-radius: 10px;
+                display: none;
+              }
+            </style>
+          </head>
+
+          <body>
+            <h2>Our Products</h2>
+            <div class="grid">
+              <div class="item" onclick="showInfo('cooling')">
+                <h3>Cooling Tower Chemicals</h3>
+                <p>Scale inhibitors, biocides, and corrosion control.</p>
+              </div>
+              <div class="item" onclick="showInfo('boiler')">
+                <h3>Boiler Treatment</h3>
+                <p>Oxygen scavengers, pH boosters, and sludge conditioners.</p>
+              </div>
+              <div class="item" onclick="showInfo('ro')">
+                <h3>RO Antiscalants</h3>
+                <p>High-performance formulations for membrane systems.</p>
+              </div>
+            </div>
+
+            <!-- Info Box -->
+            <div id="infoBox"></div>
+
+            <script>
+              // Product Information Store
+              const productInfo = {
+                cooling: `
+        <h3>Cooling Tower Chemicals</h3>
+        <p>👉 Used in HVAC, process cooling, and manufacturing units.<br>
+        👉 Controls algae, scale, and corrosion.<br>
+        👉 Helps improve heat transfer efficiency.<br>
+        👉 Available in 25kg / 50kg packaging.</p>
+      `,
+                boiler: `
+        <h3>Boiler Treatment</h3>
+        <p>👉 Protects against corrosion and scale formation.<br>
+        👉 Increases boiler life & efficiency.<br>
+        👉 Includes oxygen scavengers, pH boosters, sludge conditioners.<br>
+        👉 Suitable for high & low pressure boilers.</p>
+      `,
+                ro: `
+        <h3>RO Antiscalants</h3>
+        <p>👉 Prevents scaling & fouling in RO membranes.<br>
+        👉 Reduces cleaning frequency.<br>
+        👉 Compatible with all major RO systems.<br>
+        👉 Pack sizes: 5L / 25L / 50L.</p>
+      `
+              };
+
+              function showInfo(product) {
+                const infoBox = document.getElementById("infoBox");
+                infoBox.innerHTML = productInfo[product];
+                infoBox.style.display = "block";
+              }
+            </script>
+          </body>
+
+          </html>
+          <p>High-performance formulations for membrane systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Technical Dosing Support</h3>
+          <p>Customized dosing schedules and on-site audits.</p>
+        </div>
+        <div class="card">
+          <h3>Vendor Comparison Reports</h3>
+          <p>Cost analysis and consumption summaries for procurement.</p>
+        </div>
+        <div class="card">
+          <h3>Safety & Compliance</h3>
+          <p>MSDS documentation and regulatory guidance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Us</h2>
+      <p>Soniya Enterprise is a trusted supplier of industrial chemicals, serving manufacturing, HVAC, and water treatment sectors. With a focus on precision, safety, and long-term partnerships, we deliver solutions that meet your operational goals.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Your name" required />
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <textarea id="message" rows="5" placeholder="Message" required></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn">Send Inquiry</button>
+          <div id="formStatus" class="status"></div>
+        </div>
+      </form>
+      <p class="muted">Note: This form requires backend integration to send emails.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Soniya Enterprise — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

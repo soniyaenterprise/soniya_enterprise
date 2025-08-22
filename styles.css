@@ -1,0 +1,230 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Header */
+.site-header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-btn {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e6f2ff;
+  padding: 3rem 0;
+}
+
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background-color: #003366;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0055aa;
+}
+
+/* Products Section */
+.products .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.products .item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.products .item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Services Section */
+.services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services .card {
+  background: #fff;
+  padding: 1rem;
+  border-left: 5px solid #003366;
+  border-radius: 6px;
+  flex: 1 1 30%;
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+/* Contact Section */
+.contact form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.status {
+  margin-top: 0.5rem;
+  color: green;
+}
+
+.muted {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Boiler Guide Section */
+.boiler-guide {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+.boiler-guide h2 {
+  color: #d9534f;
+  margin-bottom: 1rem;
+}
+
+.boiler-guide h3 {
+  color: #003366;
+  margin-top: 1.5rem;
+}
+
+.boiler-guide ul,
+.boiler-guide ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.boiler-guide li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid,
+  .products .grid,
+  .services .cards,
+  .form-row {
+    flex-direction: column;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
