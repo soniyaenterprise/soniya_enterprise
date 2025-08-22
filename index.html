@@ -32,7 +32,7 @@
           <a class="btn" href="#products">Explore Products</a>
         </div>
         <div class="hero-image" aria-hidden="true">
-          <img src="./uploads/image1.jpg" alt="Chemical can"  style="height: 250px; width: 300px;">
+          <img src="./uploads/image1.jpg" alt="Industrial Chemical Solutions" style="height: 250px; width: 300px;">
         </div>
       </div>
     </section>
@@ -41,103 +41,87 @@
       <h2>Our Products</h2>
       <div class="grid">
         <div class="item">
-          <img src="./uploads/image2.jpg" alt="Cooling tower chemical can"  style="height: 250px; width: 300px;>
-          <!doctype html>
-          <html lang="en">
-
-          <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <title>Soniya Enterprise — Industrial Chemicals</title>
-            <style>
-              body {
-                font-family: Arial, sans-serif;
-              }
-
-              .grid {
-                display: flex;
-                gap: 20px;
-              }
-
-              .item {
-                border: 1px solid #ddd;
-                padding: 15px;
-                border-radius: 10px;
-                width: 250px;
-                cursor: pointer;
-                transition: 0.3s;
-              }
-
-              .item:hover {
-                background: #f8f8f8;
-              }
-
-              #infoBox {
-                margin-top: 20px;
-                padding: 15px;
-                border: 2px solid #007bff;
-                border-radius: 10px;
-                display: none;
-              }
-            </style>
-          </head>
-
-          <body>
-            <h2>Our Products</h2>
-            <div class="grid">
-              <div class="item" onclick="showInfo('cooling')">
-                <h3>Cooling Tower Chemicals</h3>
-                <p>Scale inhibitors, biocides, and corrosion control.</p>
-              </div>
-              <div class="item" onclick="showInfo('boiler')">
-                <h3>Boiler Treatment</h3>
-                <p>Oxygen scavengers, pH boosters, and sludge conditioners.</p>
-              </div>
-              <div class="item" onclick="showInfo('ro')">
-                <h3>RO Antiscalants</h3>
-                <p>High-performance formulations for membrane systems.</p>
-              </div>
-            </div>
-
-            <!-- Info Box -->
-            <div id="infoBox"></div>
-
-            <script>
-              // Product Information Store
-              const productInfo = {
-                cooling: `
-        <h3>Cooling Tower Chemicals</h3>
-        <p>👉 Used in HVAC, process cooling, and manufacturing units.<br>
-        👉 Controls algae, scale, and corrosion.<br>
-        👉 Helps improve heat transfer efficiency.<br>
-        👉 Available in 25kg / 50kg packaging.</p>
-      `,
-                boiler: `
-        <h3>Boiler Treatment</h3>
-        <p>👉 Protects against corrosion and scale formation.<br>
-        👉 Increases boiler life & efficiency.<br>
-        👉 Includes oxygen scavengers, pH boosters, sludge conditioners.<br>
-        👉 Suitable for high & low pressure boilers.</p>
-      `,
-                ro: `
-        <h3>RO Antiscalants</h3>
-        <p>👉 Prevents scaling & fouling in RO membranes.<br>
-        👉 Reduces cleaning frequency.<br>
-        👉 Compatible with all major RO systems.<br>
-        👉 Pack sizes: 5L / 25L / 50L.</p>
-      `
-              };
-
-              function showInfo(product) {
-                const infoBox = document.getElementById("infoBox");
-                infoBox.innerHTML = productInfo[product];
-                infoBox.style.display = "block";
-              }
-            </script>
-          </body>
-
-          </html>
-          <p>High-performance formulations for membrane systems.</p>
+          <img src="./uploads/image2.jpg" alt="Cooling Tower Chemicals" style="height: 250px; width: 300px;">
+          <h3>Cooling Tower Chemicals</h3>
+          <p>Scale inhibitors, biocides, and corrosion control solutions for HVAC and industrial cooling systems.</p>
+          <div class="product-details">
+            <ul>
+              <li>Scale and corrosion prevention</li>
+              <li>Biocide treatment</li>
+              <li>Heat transfer optimization</li>
+              <li>Available in 25kg/50kg packaging</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="./uploads/IMG-20250822-WA0006.jpg" alt="Boiler Treatment Chemicals" style="height: 250px; width: 300px;">
+          <h3>Boiler Treatment Chemicals</h3>
+          <p>Comprehensive solutions for boiler efficiency, corrosion protection, and scale prevention.</p>
+          <div class="product-details">
+            <ul>
+              <li>Oxygen scavengers</li>
+              <li>pH boosters and stabilizers</li>
+              <li>Sludge conditioners</li>
+              <li>High & low pressure boiler compatible</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="./uploads/IMG-20250822-WA0007.jpg" alt="RO Antiscalant Chemicals" style="height: 250px; width: 300px;">
+          <h3>RO Antiscalant Chemicals</h3>
+          <p>Advanced formulations to prevent scaling and fouling in reverse osmosis membrane systems.</p>
+          <div class="product-details">
+            <ul>
+              <li>Membrane protection</li>
+              <li>Reduced cleaning frequency</li>
+              <li>Compatible with major RO systems</li>
+              <li>Available in 5L/25L/50L packs</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="./uploads/IMG-20250822-WA0008.jpg" alt="Water Treatment Chemicals" style="height: 250px; width: 300px;">
+          <h3>Water Treatment Chemicals</h3>
+          <p>Specialized formulations for industrial water purification and treatment applications.</p>
+          <div class="product-details">
+            <ul>
+              <li>Clarification and flocculation</li>
+              <li>pH adjustment</li>
+              <li>Disinfection solutions</li>
+              <li>Custom formulations available</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="./uploads/IMG-20250822-WA0009.jpg" alt="Industrial Cleaning Chemicals" style="height: 250px; width: 300px;">
+          <h3>Industrial Cleaning Chemicals</h3>
+          <p>Professional-grade cleaning solutions for manufacturing and industrial facilities.</p>
+          <div class="product-details">
+            <ul>
+              <li>Equipment cleaning</li>
+              <li>Surface treatment</li>
+              <li>Degreasing solutions</li>
+              <li>Safe for industrial use</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="item">
+          <img src="./uploads/IMG-20250822-WA0010.jpg" alt="Specialty Chemical Solutions" style="height: 250px; width: 300px;">
+          <h3>Specialty Chemical Solutions</h3>
+          <p>Custom chemical formulations designed for specific industrial applications and requirements.</p>
+          <div class="product-details">
+            <ul>
+              <li>Custom formulations</li>
+              <li>Application-specific solutions</li>
+              <li>Technical consultation</li>
+              <li>Quality assurance</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -147,44 +131,102 @@
       <div class="cards">
         <div class="card">
           <h3>Technical Dosing Support</h3>
-          <p>Customized dosing schedules and on-site audits.</p>
+          <p>Customized dosing schedules and on-site audits to optimize chemical usage and system performance.</p>
         </div>
         <div class="card">
           <h3>Vendor Comparison Reports</h3>
-          <p>Cost analysis and consumption summaries for procurement.</p>
+          <p>Comprehensive cost analysis and consumption summaries to support informed procurement decisions.</p>
         </div>
         <div class="card">
           <h3>Safety & Compliance</h3>
-          <p>MSDS documentation and regulatory guidance.</p>
+          <p>Complete MSDS documentation and regulatory guidance to ensure workplace safety and compliance.</p>
+        </div>
+        <div class="card">
+          <h3>Product Training</h3>
+          <p>On-site training and technical support for your team to maximize chemical effectiveness and safety.</p>
         </div>
       </div>
     </section>
 
     <section id="about" class="container about">
       <h2>About Us</h2>
-      <p>Soniya Enterprise is a trusted supplier of industrial chemicals, serving manufacturing, HVAC, and water treatment sectors. With a focus on precision, safety, and long-term partnerships, we deliver solutions that meet your operational goals.</p>
+      <p>Soniya Enterprise is a trusted supplier of industrial chemicals, serving manufacturing, HVAC, and water treatment sectors across the industry. With over a decade of experience, we focus on precision, safety, and long-term partnerships to deliver solutions that meet your operational goals and exceed expectations.</p>
+      <div class="about-features">
+        <div class="feature">
+          <h4>Quality Assured</h4>
+          <p>All products meet international quality standards and undergo rigorous testing.</p>
+        </div>
+        <div class="feature">
+          <h4>Technical Expertise</h4>
+          <p>Our team provides expert consultation and support for optimal chemical application.</p>
+        </div>
+        <div class="feature">
+          <h4>Reliable Supply</h4>
+          <p>Consistent product availability and timely delivery to maintain your operations.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="container contact">
       <h2>Contact Us</h2>
-      <form id="contactForm">
-        <div class="form-row">
-          <input type="text" id="name" placeholder="Your name" required />
-          <input type="email" id="email" placeholder="Email" required />
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Ready to discuss your chemical requirements? Contact our team for expert consultation and competitive quotes.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <strong>Phone:</strong> +91 [Your Phone Number]
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong> info@soniyaenterprise.com
+            </div>
+            <div class="contact-item">
+              <strong>Address:</strong> [Your Business Address]
+            </div>
+          </div>
         </div>
-        <textarea id="message" rows="5" placeholder="Message" required></textarea>
-        <div class="form-row">
-          <button type="submit" class="btn">Send Inquiry</button>
-          <div id="formStatus" class="status"></div>
-        </div>
-      </form>
-      <p class="muted">Note: This form requires backend integration to send emails.</p>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-row">
+            <input type="tel" id="phone" placeholder="Phone Number" />
+            <input type="text" id="company" placeholder="Company Name" />
+          </div>
+          <textarea id="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+          <div class="form-row">
+            <button type="submit" class="btn">Send Inquiry</button>
+            <div id="formStatus" class="status"></div>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Soniya Enterprise — All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Soniya Enterprise</h4>
+          <p>Your trusted partner for industrial chemical solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#products">Products</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>Phone: +91 [Your Phone]</p>
+          <p>Email: info@soniyaenterprise.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Soniya Enterprise — All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
