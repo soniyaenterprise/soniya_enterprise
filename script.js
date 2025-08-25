@@ -227,3 +227,141 @@ function searchProducts(query) {
 // Export functions for potential use in HTML
 window.searchProducts = searchProducts;
 window.animateCounter = animateCounter;
+
+// QR Scanner and Udyam Verification functionality
+let html5QrcodeScanner = null;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Udyam verification
+    initializeUdyamVerification();
+    
+    // Initialize QR Scanner
+    initializeQRScanner();
+});
+
+function initializeUdyamVerification() {
+    const verifyButton = document.getElementById('verifyUdyam');
+    const udyamInput = document.getElementById('udyamInput');
+    const verificationResult = document.getElementById('verificationResult');
+    
+    if (verifyButton && udyamInput && verificationResult) {
+        verifyButton.addEventListener('click', function() {
+            const udyamNumber = udyamInput.value.trim();
+            if (udyamNumber) {
+                verifyUdyamNumber(udyamNumber, verificationResult);
+            } else {
+                showVerificationResult('Please enter a Udyam number to verify.', 'error', verificationResult);
+            }
+        });
+    }
+}
+
+function initializeQRScanner() {
+    const startScannerBtn = document.getElementById('startScanner');
+    const stopScannerBtn = document.getElementById('stopScanner');
+    const qrReader = document.getElementById('qr-reader');
+    const scannerResult = document.getElementById('scannerResult');
+    
+    if (startScannerBtn && stopScannerBtn && qrReader && scannerResult) {
+        startScannerBtn.addEventListener('click', function() {
+            startQRScanner(qrReader, scannerResult, startScannerBtn, stopScannerBtn);
+        });
+        
+        stopScannerBtn.addEventListener('click', function() {
+            stopQRScanner(startScannerBtn, stopScannerBtn);
+        });
+    }
+}
+
+function startQRScanner(qrReader, resultDiv, startBtn, stopBtn) {
+    if (!html5QrcodeScanner) {
+        html5QrcodeScanner = new Html5Qrcode("qr-reader");
+    }
+    
+    const config = {
+        fps: 10,
+        qrbox: { width: 250, height: 250 },
+        aspectRatio: 1.0
+    };
+    
+    html5QrcodeScanner.start(
+        { facingMode: "environment" },
+        config,
+        function(decodedText, decodedResult) {
+            // Success callback
+            showScannerResult(`QR Code detected: ${decodedText}`, 'success', resultDiv);
+            
+            // Auto-verify if it looks like a Udyam number
+            if (decodedText.includes('UDYAM') || decodedText.includes('udyam')) {
+                verifyUdyamNumber(decodedText, resultDiv);
+            }
+            
+            // Stop scanner after successful scan
+            setTimeout(() => {
+                stopQRScanner(startBtn, stopBtn);
+            }, 2000);
+        },
+        function(errorMessage) {
+            // Error callback - ignore for continuous scanning
+        }
+    ).then(() => {
+        startBtn.style.display = 'none';
+        stopBtn.style.display = 'inline-block';
+        showScannerResult('Scanner started. Point camera at QR code.', 'info', resultDiv);
+    }).catch(err => {
+        showScannerResult(`Scanner error: ${err}`, 'error', resultDiv);
+    });
+}
+
+function stopQRScanner(startBtn, stopBtn) {
+    if (html5QrcodeScanner) {
+        html5QrcodeScanner.stop().then(() => {
+            startBtn.style.display = 'inline-block';
+            stopBtn.style.display = 'none';
+        }).catch(err => {
+            console.error('Error stopping scanner:', err);
+        });
+    }
+}
+
+function verifyUdyamNumber(udyamNumber, resultDiv) {
+    // Simulate Udyam verification (in real implementation, this would call an API)
+    showVerificationResult('Verifying Udyam number...', 'info', resultDiv);
+    
+    setTimeout(() => {
+        // Mock verification result
+        if (udyamNumber.toUpperCase().includes('UDYAM')) {
+            showVerificationResult(`✅ Udyam number ${udyamNumber} is valid and verified!`, 'success', resultDiv);
+        } else {
+            showVerificationResult(`❌ Invalid Udyam number format: ${udyamNumber}`, 'error', resultDiv);
+        }
+    }, 1500);
+}
+
+function showVerificationResult(message, type, resultDiv) {
+    if (resultDiv) {
+        resultDiv.textContent = message;
+        resultDiv.className = `verification-result ${type}`;
+        
+        // Auto-hide after 8 seconds
+        setTimeout(() => {
+            resultDiv.textContent = '';
+            resultDiv.className = 'verification-result';
+        }, 8000);
+    }
+}
+
+function showScannerResult(message, type, resultDiv) {
+    if (resultDiv) {
+        resultDiv.textContent = message;
+        resultDiv.className = `scanner-result ${type}`;
+        
+        // Auto-hide after 5 seconds for info messages
+        if (type === 'info') {
+            setTimeout(() => {
+                resultDiv.textContent = '';
+                resultDiv.className = 'scanner-result';
+            }, 5000);
+        }
+    }
+}
