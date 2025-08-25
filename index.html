@@ -1,17 +1,1076 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Soniya Enterprise — Industrial Chemicals</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./Soniya Enterprise — Industrial Chemicals_files/styles.css">
+<!-- Code injected by Five-server -->
+  <script async="" data-id="five-server" data-file="c:\Users\Soniya enterprises\OneDrive\Desktop\soniya enterprises\index.html" type="application/javascript" src="./Soniya Enterprise — Industrial Chemicals_files/fiveserver.js.download"></script>
+  <style>
+    .status.success {
+        color: #27ae60;
+        font-weight: 600;
+    }
+    
+    .status.error {
+        color: #e74c3c;
+        font-weight: 600;
+    }
+    
+    .status {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Enhanced Services Section Styles */
+    .services {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .services h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #2c3e50;
+        font-size: 2.5rem;
+    }
+    
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        border-color: #3498db;
+    }
+    
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12, #e74c3c);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .service-card p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .service-features {
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-features ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .service-features li {
+        padding: 0.5rem 0;
+        color: #555;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .service-features li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+    }
+    
+    .service-btn {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .service-btn:hover {
+        background: linear-gradient(135deg, #2980b9, #1f5f8b);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+    
+    /* Service Modal Styles */
+    .service-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        backdrop-filter: blur(5px);
+    }
+    
+    .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 2rem;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        position: relative;
+        animation: modalSlideIn 0.3s ease;
+    }
+    
+    @keyframes modalSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .close-modal {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.3s ease;
+    }
+    
+    .close-modal:hover {
+        color: #e74c3c;
+    }
+    
+    .modal-content h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    
+    .modal-content p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-content ul {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    .modal-content li {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .cards {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            padding: 1.5rem;
+        }
+        
+        .modal-content {
+            width: 95%;
+            margin: 10% auto;
+            padding: 1.5rem;
+        }
+    }
+    
+    /* Enhanced Products Section Styles */
+    .products {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .products h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #2c3e50;
+        font-size: 2.5rem;
+    }
+    
+    .featured-products {
+        margin-bottom: 4rem;
+    }
+    
+    .featured-title {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+    
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .featured-item {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .featured-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        border-color: #e74c3c;
+    }
+    
+    .featured-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #e74c3c, #f39c12, #f1c40f, #2ecc71);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .featured-item:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .featured-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .featured-item h4 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .featured-item p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-features ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-features li {
+        padding: 0.3rem 0;
+        color: #555;
+        position: relative;
+        padding-left: 1.5rem;
+        text-align: left;
+    }
+    
+    .product-features li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+    }
+    
+    .product-btn {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .product-btn:hover {
+        background: linear-gradient(135deg, #c0392b, #a93226);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    .item {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        border-color: #3498db;
+    }
+    
+    .item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12, #e74c3c);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .item:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .item img {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .item:hover img {
+        transform: scale(1.05);
+    }
+    
+    .export-product-icon {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    
+    .item h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .item p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .product-details ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-details li {
+        padding: 0.5rem 0;
+        color: #555;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .product-details li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+    }
+    
+    .complete-range {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .complete-range h3 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .range-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    .range-category h4 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 0.5rem;
+    }
+    
+    .range-category ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .range-category li {
+        padding: 0.3rem 0;
+        color: #555;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    
+    .range-category li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-weight: bold;
+    }
+    
+    /* Interactive Product Range Cards */
+    .product-range-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .product-range-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        border-color: #f39c12;
+    }
+    
+    .product-range-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #f39c12, #e67e22, #d35400);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .product-range-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .range-btn {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .range-btn:hover {
+        background: linear-gradient(135deg, #e67e22, #d35400);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+    }
+    
+    /* Product Modal Styles */
+    .product-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        backdrop-filter: blur(5px);
+    }
+    
+    .product-modal .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 2rem;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 700px;
+        position: relative;
+        animation: modalSlideIn 0.3s ease;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .product-modal h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .product-modal p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .product-modal .product-features ul {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-modal .product-features li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    
+    .product-modal .product-features li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #27ae60;
+        font-weight: bold;
+    }
+    
+    /* Responsive Design for Products */
+    @media (max-width: 768px) {
+        .featured-grid,
+        .grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .featured-item,
+        .item {
+            padding: 1.5rem;
+        }
+        
+        .range-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .product-modal .modal-content {
+            width: 95%;
+            margin: 10% auto;
+            padding: 1.5rem;
+        }
+    }
+      /* Injected by five-server */
+      /*[data-highlight="true"] {
+        border: 1px rgb(90,170,255) solid !important;
+        background-color: rgba(155,215,255,0.5);
+        animation: fadeOutHighlight 1s forwards 0.5s;
+      }
+      img[data-highlight="true"] {
+        filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+        animation: fadeOutHighlightIMG 0.5s forwards 0.5s;
+      }*/
+      @keyframes fadeOutHighlight {
+        from {background-color: rgba(155,215,255,0.5);}
+        to {background-color: rgba(155,215,255,0);}
+      }      
+      @keyframes fadeOutHighlightIMG {
+        0% {filter: sepia(100%) hue-rotate(180deg) saturate(200%);}
+        33% {filter: sepia(66%) hue-rotate(180deg) saturate(100%);}
+        50% {filter: sepia(50%) hue-rotate(90deg) saturate(50%);}
+        66% {filter: sepia(33%) hue-rotate(0deg) saturate(100%);}
+        100% {filter: sepia(0%) hue-rotate(0deg) saturate(100%);}
+      }
+      @keyframes fiveserverInfoPopup {
+        0%   {top:-40px;}
+        15%  {top:4px;}
+        85%  {top:4px;}
+        100% {top:-40px;}
+      }
+      /*smaller*/
+      @media (max-width: 640px) {
+        #fiveserver-info-wrapper {
+          max-width: 98%;
+        }
+        #fiveserver-info {
+          border-radius: 0px;
+        }      
+      }
+
+      /* Responsive Design for Export Products */
+    @media (max-width: 768px) {
+        .export-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .export-card {
+            padding: 1.5rem;
+        }
+    }
+    
+    /* Additional Stylish Effects */
+    
+    /* Glowing Effects */
+    .hero h1 {
+        text-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+        from { text-shadow: 0 0 20px rgba(52, 152, 219, 0.5); }
+        to { text-shadow: 0 0 30px rgba(52, 152, 219, 0.8), 0 0 40px rgba(52, 152, 219, 0.6); }
+    }
+    
+    /* Floating Animation for Cards */
+    .service-card, .product-card, .item {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .service-card:nth-child(2), .product-card:nth-child(2), .item:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .service-card:nth-child(3), .product-card:nth-child(3), .item:nth-child(3) {
+        animation-delay: 1s;
+    }
+    
+    .service-card:nth-child(4), .product-card:nth-child(4), .item:nth-child(4) {
+        animation-delay: 1.5s;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    /* Gradient Text Effects */
+    .services h2, .products h2, .about h2, .certificates h2, .contact h2 {
+        background: linear-gradient(45deg, #2c3e50, #3498db, #2ecc71, #f39c12);
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 3s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    /* Enhanced Button Styles */
+    .btn {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Particle Background Effect */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 20% 80%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(46, 204, 113, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(243, 156, 18, 0.1) 0%, transparent 50%);
+        animation: particleMove 20s linear infinite;
+        z-index: -1;
+    }
+    
+    @keyframes particleMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(100px, 100px); }
+    }
+    
+    /* Enhanced Card Shadows */
+    .service-card, .product-card, .item, .featured-item {
+        box-shadow: 
+            0 10px 30px rgba(0,0,0,0.1),
+            0 1px 8px rgba(0,0,0,0.05),
+            inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    
+    .service-card:hover, .product-card:hover, .item:hover, .featured-item:hover {
+        box-shadow: 
+            0 20px 40px rgba(0,0,0,0.15),
+            0 8px 16px rgba(0,0,0,0.1),
+            inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #3498db, #2ecc71);
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(45deg, #2980b9, #27ae60);
+    }
+    
+    /* Enhanced Modal Animation */
+    .modal-content {
+        animation: modalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    @keyframes modalSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-100px) scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+    
+    /* Loading Animation for Buttons */
+    .btn:active {
+        transform: scale(0.95);
+        transition: transform 0.1s;
+    }
+    
+    /* Enhanced Typography */
+    .hero p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Card Border Gradient */
+    .service-card, .product-card, .item {
+        border: 2px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(45deg, #3498db, #2ecc71, #f39c12, #e74c3c) border-box;
+    }
+    
+    /* Enhanced Hover States */
+    .nav a {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    
+    .nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+        transition: width 0.3s ease;
+    }
+    
+    .nav a:hover::after {
+        width: 100%;
+    }
+    
+    /* Enhanced Footer */
+    .site-footer {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .site-footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(45deg, rgba(52, 152, 219, 0.1) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(46, 204, 113, 0.1) 25%, transparent 25%);
+        background-size: 60px 60px;
+        animation: footerPattern 20s linear infinite;
+    }
+    
+    @keyframes footerPattern {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(60px, 60px); }
+    }
+    
+    /* Enhanced Contact Form */
+    .contact-form input, .contact-form textarea {
+        border: 2px solid transparent;
+        background: linear-gradient(white, white) padding-box,
+                    linear-gradient(45deg, #3498db, #2ecc71) border-box;
+        transition: all 0.3s ease;
+    }
+    
+    .contact-form input:focus, .contact-form textarea:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 20px rgba(52, 152, 219, 0.3);
+        transform: translateY(-2px);
+    }
+    
+    /* Background Images for Sections */
+    
+    /* Hero Section Background */
+    .hero {
+        background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(52, 152, 219, 0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    /* Live graphics canvas in hero */
+    .hero-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    
+    /* Services Section Background */
+    .services {
+        background: linear-gradient(rgba(248, 249, 250, 0.95), rgba(233, 236, 239, 0.95)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="rgba(52, 152, 219, 0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Products Section Background */
+    .products {
+        background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="hexagons" width="60" height="60" patternUnits="userSpaceOnUse"><polygon points="30,0 60,15 60,45 30,60 0,45 0,15" fill="none" stroke="rgba(46, 204, 113, 0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hexagons)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* About Section Background */
+    .about {
+        background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="waves" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 0 50 Q 25 25, 50 50 T 100 50" fill="none" stroke="rgba(243, 156, 18, 0.1)" stroke-width="2"/></pattern></defs><rect width="100%" height="100%" fill="url(%23waves)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Certificates Section Background */
+    .certificates {
+        background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="stars" width="80" height="80" patternUnits="userSpaceOnUse"><polygon points="40,0 50,30 80,40 50,50 40,80 30,50 0,40 30,30" fill="rgba(231, 76, 60, 0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23stars)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Contact Section Background */
+    .contact {
+        background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="circles" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="15" fill="none" stroke="rgba(155, 89, 182, 0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23circles)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Header Background Enhancement */
+    .site-header {
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200"><defs><pattern id="headerPattern" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 0 50 L 100 50 M 50 0 L 50 100" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23headerPattern)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Footer Background Enhancement */
+    .site-footer {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="footerPattern" width="80" height="80" patternUnits="userSpaceOnUse"><polygon points="40,0 60,20 40,40 20,20" fill="rgba(255, 255, 255, 0.03)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23footerPattern)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Featured Products Background */
+    .featured-products {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="featuredPattern" width="120" height="120" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="60" height="60" fill="rgba(52, 152, 219, 0.05)"/><rect x="60" y="60" width="60" height="60" fill="rgba(46, 204, 113, 0.05)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23featuredPattern)"/></svg>');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    /* Complete Range Background */
+    .complete-range {
+        background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="rangePattern" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 0 0 L 100 100 M 100 0 L 0 100" fill="none" stroke="rgba(243, 156, 18, 0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23rangePattern)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Modal Background Enhancement */
+    .service-modal, .product-modal {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="modalPattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255, 255, 255, 0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23modalPattern)"/></svg>');
+        background-size: cover;
+        background-position: center;
+    }
+
+      </style>
+
+  <style>
+    /* Site-wide Chemical Background Image */
+    html, body {
+        background-color: transparent;
+    }
+    
+    body::before {
+        content: none !important;
+        background: none !important;
+    }
+
+    /* Floating WhatsApp and Share Buttons */
+    .floating-actions {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 1001;
+    }
+    
+    .fab-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .fab-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+        filter: brightness(1.05);
+    }
+    
+    .wa-btn { background: #25D366; }
+    .share-btn { background: linear-gradient(135deg, #3498db, #2ecc71); font-size: 22px; }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header" style="background: rgba(44, 62, 80, 0.95); backdrop-filter: blur(10px);">
     <div class="container">
-      <a class="logo" href="#">Soniya Enterprise</a>
+      <a class="logo" href="#home">Soniya Enterprise</a>
       <nav class="nav" id="nav">
         <a href="#home">Home</a>
         <a href="#products">Products</a>
@@ -25,7 +1084,8 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="transform: translateY(-268.8px);">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container hero-grid">
         <div>
           <h1>Reliable Chemical Solutions for Industry</h1>
@@ -33,7 +1093,7 @@
           <a class="btn" href="#products">Explore Products</a>
         </div>
         <div class="hero-image" aria-hidden="true">
-          <img src="./uploads/image1.jpg" alt="Industrial Chemical Solutions" style="height: 250px; width: 300px;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/image1.jpg" alt="Industrial Chemical Solutions" style="height: 250px; width: 300px;">
         </div>
       </div>
     </section>
@@ -45,9 +1105,9 @@
       <div class="featured-products">
         <h3 class="featured-title">Featured Solutions</h3>
         <div class="featured-grid">
-                     <div class="featured-item">
+          <div class="featured-item product-card" onclick="showProductDetails('phosphating')">
              <div class="featured-image">
-               <img src="./uploads/3in1-chemical.jpg" alt="3 IN 1 PHOSPHATING CHEMICALS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+               <img src="./Soniya Enterprise — Industrial Chemicals_files/3in1-chemical.jpg" alt="3 IN 1 PHOSPHATING CHEMICALS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
              </div>
              <h4>3 IN 1 PHOSPHATING CHEMICALS</h4>
              <p>Complete phosphating solution for metal treatment and surface preparation</p>
@@ -58,24 +1118,45 @@
                  <li>Provides Phosphating Coating</li>
                </ul>
              </div>
+            <button class="product-btn">View Details</button>
            </div>
-          <div class="featured-item">
+          
+          <div class="featured-item product-card" onclick="showProductDetails('paint-stripper')">
             <div class="featured-icon">🎨</div>
             <h4>SP STRIP-X PAINT STRIPPER</h4>
             <p>Advanced paint stripper for multiple layers of paint, varnish, and lacquers</p>
+            <div class="product-features">
+              <ul>
+                <li>Multi-layer paint removal</li>
+                <li>Safe for various surfaces</li>
+                <li>Fast-acting formula</li>
+                <li>Environmentally friendly</li>
+              </ul>
           </div>
-          <div class="featured-item">
+            <button class="product-btn">View Details</button>
+          </div>
+          
+          <div class="featured-item product-card" onclick="showProductDetails('water-treatment')">
             <div class="featured-icon">💧</div>
             <h4>WATER TREATMENT CHEMICALS</h4>
             <p>Comprehensive range of water treatment solutions for industrial applications</p>
+            <div class="product-features">
+              <ul>
+                <li>Scale prevention</li>
+                <li>Corrosion control</li>
+                <li>Biocide treatment</li>
+                <li>pH stabilization</li>
+              </ul>
+            </div>
+            <button class="product-btn">View Details</button>
           </div>
         </div>
       </div>
 
-      <div class="grid">
-        <div class="item">
-          <img src="./uploads/image2.jpg" alt="Cooling Tower Chemicals" style="height: 250px; width: 300px;">
-          <h3>Cooling Tower Chemicals</h3>
+            <div class="grid">
+        <div class="item product-card" onclick="showProductDetails('cooling-tower')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/image2.jpg" alt="Cooling Tower Chemicals" style="height: 250px; width: 300px;">
+                <h3>Cooling Tower Chemicals</h3>
           <p>Scale inhibitors, biocides, and corrosion control solutions for HVAC and industrial cooling systems.</p>
           <div class="product-details">
             <ul>
@@ -84,11 +1165,12 @@
               <li>Heat transfer optimization</li>
               <li>Available in 25kg/50kg packaging</li>
             </ul>
-          </div>
-        </div>
+              </div>
+          <button class="product-btn">View Details</button>
+              </div>
         
-        <div class="item">
-          <img src="./uploads/IMG-20250822-WA0007.jpg" alt="Boiler Treatment Chemicals" style="height: 250px; width: 300px;">
+        <div class="item product-card" onclick="showProductDetails('boiler-treatment')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/IMG-20250822-WA0007.jpg" alt="Boiler Treatment Chemicals" style="height: 250px; width: 300px;">
           <h3>Boiler Treatment Chemicals</h3>
           <p>Comprehensive solutions for boiler efficiency, corrosion protection, and scale prevention.</p>
           <div class="product-details">
@@ -96,13 +1178,14 @@
               <li>Oxygen scavengers</li>
               <li>pH boosters and stabilizers</li>
               <li>Sludge conditioners</li>
-              <li>High & low pressure boiler compatible</li>
+              <li>High &amp; low pressure boiler compatible</li>
             </ul>
-          </div>
-        </div>
-        
-        <div class="item">
-          <img src="./uploads/IMG-20250822-WA0006.jpg" alt="RO Antiscalant Chemicals" style="height: 250px; width: 300px;">
+              </div>
+          <button class="product-btn">View Details</button>
+            </div>
+
+        <div class="item product-card" onclick="showProductDetails('ro-antiscalant')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/IMG-20250822-WA0006.jpg" alt="RO Antiscalant Chemicals" style="height: 250px; width: 300px;">
           <h3>RO Antiscalant Chemicals</h3>
           <p>Advanced formulations to prevent scaling and fouling in reverse osmosis membrane systems.</p>
           <div class="product-details">
@@ -113,24 +1196,26 @@
               <li>Available in 5L/25L/50L packs</li>
             </ul>
           </div>
+          <button class="product-btn">View Details</button>
         </div>
         
-        <div class="item">
-          <img src="./uploads/IMG-20250822-WA0008.jpg" alt="Paint Stripper Chemical" style="height: 250px; width: 300px;">
+        <div class="item product-card" onclick="showProductDetails('paint-stripper-chemical')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/IMG-20250822-WA0008.jpg" alt="Paint Stripper Chemical" style="height: 250px; width: 300px;">
           <h3>Paint Stripper Chemical</h3>
-          <p> Can strip multiple layers of paint,varness,lacquers.</p>
+          <p>Can strip multiple layers of paint, varnish, and lacquers.</p>
           <div class="product-details">
             <ul>
-              <li>Reduce the need of sanding,Grinding, hand scrapping</li>
+              <li>Reduce the need of sanding, grinding, hand scraping</li>
               <li>Make it easy to repaint</li>
-              <li>Avilable in 35kg, 50kg </li>
+              <li>Available in 35kg, 50kg</li>
               <li>Custom formulations available</li>
             </ul>
           </div>
+          <button class="product-btn">View Details</button>
         </div>
         
-        <div class="item">
-          <img src="./uploads/IMG-20250822-WA0009.jpg" alt="Industrial Cleaning Chemicals" style="height: 250px; width: 300px;">
+        <div class="item product-card" onclick="showProductDetails('industrial-cleaning')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/IMG-20250822-WA0009.jpg" alt="Industrial Cleaning Chemicals" style="height: 250px; width: 300px;">
           <h3>Industrial Cleaning Chemicals</h3>
           <p>Professional-grade cleaning solutions for manufacturing and industrial facilities.</p>
           <div class="product-details">
@@ -138,13 +1223,14 @@
               <li>During oil and gas production</li>
               <li>Scale deposition in equipment</li>
               <li>Pipelines and well is prevented</li>
-              <li>Available in 25kg,35kg,50kg</li>
+              <li>Available in 25kg, 35kg, 50kg</li>
             </ul>
           </div>
+          <button class="product-btn">View Details</button>
         </div>
         
-        <div class="item">
-          <img src="./uploads/IMG-20250822-WA0010.jpg" alt="Specialty Chemical Solutions" style="height: 250px; width: 300px;">
+        <div class="item product-card" onclick="showProductDetails('specialty-chemicals')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <img src="./Soniya Enterprise — Industrial Chemicals_files/IMG-20250822-WA0010.jpg" alt="Specialty Chemical Solutions" style="height: 250px; width: 300px;">
           <h3>Specialty Chemical Solutions</h3>
           <p>Custom chemical formulations designed for specific industrial applications and requirements.</p>
           <div class="product-details">
@@ -155,6 +1241,37 @@
               <li>Quality assurance</li>
             </ul>
           </div>
+          <button class="product-btn">View Details</button>
+        </div>
+        
+        <div class="item product-card" onclick="showProductDetails('international-export')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="export-product-icon">🌍</div>
+          <h3>International Export</h3>
+          <p>Export our industrial chemicals worldwide with complete documentation and compliance.</p>
+          <div class="product-details">
+            <ul>
+              <li>ISO 9001:2015 Certified</li>
+              <li>Complete MSDS Documentation</li>
+              <li>Custom Packaging Available</li>
+              <li>Export Compliance</li>
+            </ul>
+          </div>
+          <button class="product-btn">Export Details</button>
+        </div>
+        
+        <div class="item product-card" onclick="showProductDetails('export-certifications')" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+          <div class="export-product-icon">📋</div>
+          <h3>Export Certifications</h3>
+          <p>All necessary certifications and documentation for international trade.</p>
+          <div class="product-details">
+            <ul>
+              <li>ISO Certification</li>
+              <li>Udyam Registration</li>
+              <li>Export Licenses</li>
+              <li>Quality Certificates</li>
+            </ul>
+          </div>
+          <button class="product-btn">View Certificates</button>
         </div>
       </div>
 
@@ -162,23 +1279,25 @@
       <div class="complete-range">
         <h3>Complete Product Range</h3>
         <div class="range-grid">
-          <div class="range-category">
+          <div class="range-category product-range-card" onclick="showProductRangeDetails('pre-treatment')">
             <h4>Pre-Treatment Chemicals</h4>
             <ul>
               <li>Phosphating chemicals</li>
               <li>SP Strip-X paint stripper</li>
               <li>All water treatment chemicals</li>
             </ul>
+            <button class="range-btn">View Details</button>
           </div>
-          <div class="range-category">
-            <h4>Cooling & Boiler Systems</h4>
+          <div class="range-category product-range-card" onclick="showProductRangeDetails('cooling-boiler')">
+            <h4>Cooling &amp; Boiler Systems</h4>
             <ul>
               <li>Cooling tower chemicals</li>
               <li>PH booster</li>
               <li>Corrosion inhibitor</li>
             </ul>
+            <button class="range-btn">View Details</button>
           </div>
-          <div class="range-category">
+          <div class="range-category product-range-card" onclick="showProductRangeDetails('water-treatment')">
             <h4>Water Treatment Solutions</h4>
             <ul>
               <li>Alkalinity reducer</li>
@@ -186,7 +1305,16 @@
               <li>Oxygen scavenger</li>
               <li>Corrosion preventive (polymerized)</li>
             </ul>
+            <button class="range-btn">View Details</button>
           </div>
+        </div>
+      </div>
+      
+      <!-- Product Details Modal -->
+      <div id="productModal" class="product-modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div id="productModalContent"></div>
         </div>
       </div>
     </section>
@@ -194,21 +1322,72 @@
     <section id="services" class="container services">
       <h2>Our Services</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card service-card" onclick="showServiceDetails('technical')">
+          <div class="service-icon">🔧</div>
           <h3>Technical Dosing Support</h3>
           <p>Customized dosing schedules and on-site audits to optimize chemical usage and system performance.</p>
+          <div class="service-features">
+            <ul>
+              <li>Custom dosing schedules</li>
+              <li>On-site system audits</li>
+              <li>Performance optimization</li>
+              <li>Cost analysis reports</li>
+            </ul>
         </div>
-        <div class="card">
+          <button class="service-btn">Learn More</button>
+        </div>
+        
+        <div class="card service-card" onclick="showServiceDetails('vendor')">
+          <div class="service-icon">📊</div>
           <h3>Vendor Comparison Reports</h3>
           <p>Comprehensive cost analysis and consumption summaries to support informed procurement decisions.</p>
+          <div class="service-features">
+            <ul>
+              <li>Cost-benefit analysis</li>
+              <li>Consumption tracking</li>
+              <li>Performance metrics</li>
+              <li>ROI calculations</li>
+            </ul>
         </div>
-        <div class="card">
+          <button class="service-btn">Learn More</button>
+        </div>
+        
+        <div class="card service-card" onclick="showServiceDetails('safety')">
+          <div class="service-icon">🛡️</div>
           <h3>Safety & Compliance</h3>
           <p>Complete MSDS documentation and regulatory guidance to ensure workplace safety and compliance.</p>
+          <div class="service-features">
+            <ul>
+              <li>MSDS documentation</li>
+              <li>Safety training</li>
+              <li>Regulatory compliance</li>
+              <li>Emergency procedures</li>
+            </ul>
         </div>
-        <div class="card">
+          <button class="service-btn">Learn More</button>
+        </div>
+        
+        <div class="card service-card" onclick="showServiceDetails('training')">
+          <div class="service-icon">🎓</div>
           <h3>Product Training</h3>
           <p>On-site training and technical support for your team to maximize chemical effectiveness and safety.</p>
+          <div class="service-features">
+            <ul>
+              <li>On-site training sessions</li>
+              <li>Technical support</li>
+              <li>Best practices guidance</li>
+              <li>Safety protocols</li>
+            </ul>
+          </div>
+          <button class="service-btn">Learn More</button>
+        </div>
+      </div>
+      
+      <!-- Service Details Modal -->
+      <div id="serviceModal" class="service-modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div id="modalContent"></div>
         </div>
       </div>
     </section>
@@ -239,7 +1418,7 @@
           <h3>ISO 9001:2015 Certification</h3>
           <div class="certificate-content">
             <div class="certificate-image">
-              <img src="./uploads/iso-certificate.jpg" alt="ISO 9001:2015 Certificate" style="max-width: 100%; height: auto;">
+              <img src="./Soniya Enterprise — Industrial Chemicals_files/iso-certificate.jpg" alt="ISO 9001:2015 Certificate" style="max-width: 100%; height: auto;">
             </div>
             <div class="certificate-details">
               <h4>Certificate Details</h4>
@@ -271,7 +1450,7 @@
                </div>
              </div>
             <div class="qr-code">
-              <img src="./uploads/udyam-qr.png" alt="Udyam Registration QR Code" style="width: 200px; height: 200px;">
+              <img src="./Soniya Enterprise — Industrial Chemicals_files/udyam-qr.png" alt="Udyam Registration QR Code" style="width: 200px; height: 200px;">
             </div>
             <div class="verification-tools">
               <div class="manual-verification">
@@ -301,7 +1480,7 @@
           <p>Ready to discuss your chemical requirements? Contact our team for expert consultation and competitive quotes.</p>
           <div class="contact-details">
             <div class="contact-item">
-              <strong>Phone:</strong> +91 [9599214933]
+              <strong>Phone:</strong> <a href="https://wa.me/919599214933?text=Hello%20Soniya%20Enterprise%2C%20I%27m%20interested%20in%20your%20products" target="_blank" rel="noopener" style="color:#25D366; text-decoration:none; font-weight:600;">+91 9599214933 (WhatsApp)</a>
             </div>
             <div class="contact-item">
               <strong>Email:</strong> soniyagujjar1988@gmail.com
@@ -312,20 +1491,20 @@
           </div>
         </div>
         <form id="contactForm" class="contact-form">
+        <div class="form-row">
+            <input type="text" id="name" placeholder="Your Name" required="">
+            <input type="email" id="email" placeholder="Email Address" required="">
+        </div>
           <div class="form-row">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Email Address" required />
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <input type="text" id="company" placeholder="Company Name">
           </div>
-          <div class="form-row">
-            <input type="tel" id="phone" placeholder="Phone Number" />
-            <input type="text" id="company" placeholder="Company Name" />
-          </div>
-          <textarea id="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
-          <div class="form-row">
-            <button type="submit" class="btn">Send Inquiry</button>
-            <div id="formStatus" class="status"></div>
-          </div>
-        </form>
+          <textarea id="message" rows="5" placeholder="Tell us about your requirements..." required=""></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn">Send Inquiry</button>
+          <div id="formStatus" class="status"></div>
+        </div>
+      </form>
       </div>
     </section>
   </main>
@@ -347,18 +1526,564 @@
         </div>
         <div class="footer-section">
           <h4>Contact Info</h4>
-          <p>Phone: +91 [9599214933]</p> 
+          <p>Phone: <a href="https://wa.me/919599214933?text=Hello%20Soniya%20Enterprise%2C%20I%27m%20interested%20in%20your%20products" target="_blank" rel="noopener" style="color:#25D366; text-decoration:none; font-weight:600;">+91 9599214933 (WhatsApp)</a></p> 
           <p>Email: soniyagujjar1988@gmail.com</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Soniya Enterprise — All rights reserved.</p>
+        <p>© <span id="year">2025</span> Soniya Enterprise — All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
-  <script src="script.js"></script>
-</body>
+  <script src="./Soniya Enterprise — Industrial Chemicals_files/html5-qrcode.min.js.download"></script>
+  <script src="./Soniya Enterprise — Industrial Chemicals_files/script.js.download"></script>
 
-</html>
+  <script>
+    // Service Modal Functionality
+    function showServiceDetails(serviceType) {
+        const modal = document.getElementById('serviceModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        let content = '';
+        
+        switch(serviceType) {
+            case 'technical':
+                content = `
+                    <h3>🔧 Technical Dosing Support</h3>
+                    <p>Our comprehensive technical dosing support ensures optimal chemical performance and system efficiency.</p>
+                    
+                    <h4>What We Provide:</h4>
+                    <ul>
+                        <li><strong>Custom Dosing Schedules:</strong> Tailored to your specific system requirements and operational conditions</li>
+                        <li><strong>On-Site System Audits:</strong> Comprehensive evaluation of your current chemical treatment program</li>
+                        <li><strong>Performance Optimization:</strong> Data-driven recommendations to improve efficiency and reduce costs</li>
+                        <li><strong>Cost Analysis Reports:</strong> Detailed breakdown of chemical consumption and ROI analysis</li>
+                    </ul>
+                    
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Reduced chemical waste and costs</li>
+                        <li>Improved system performance and longevity</li>
+                        <li>Preventive maintenance scheduling</li>
+                        <li>24/7 technical support hotline</li>
+                    </ul>
+                    
+                    <p><strong>Contact us today to schedule your free system audit!</strong></p>
+                `;
+                break;
+                
+            case 'vendor':
+                content = `
+                    <h3>📊 Vendor Comparison Reports</h3>
+                    <p>Make informed procurement decisions with our comprehensive vendor comparison and analysis services.</p>
+                    
+                    <h4>Our Analysis Includes:</h4>
+                    <ul>
+                        <li><strong>Cost-Benefit Analysis:</strong> Detailed comparison of pricing, quality, and performance</li>
+                        <li><strong>Consumption Tracking:</strong> Real-time monitoring of chemical usage patterns</li>
+                        <li><strong>Performance Metrics:</strong> Quantified results and efficiency measurements</li>
+                        <li><strong>ROI Calculations:</strong> Return on investment analysis for different solutions</li>
+                    </ul>
+                    
+                    <h4>Report Features:</h4>
+                    <ul>
+                        <li>Monthly consumption summaries</li>
+                        <li>Cost per unit analysis</li>
+                        <li>Performance benchmarking</li>
+                        <li>Recommendations for optimization</li>
+                    </ul>
+                    
+                    <p><strong>Get your customized vendor comparison report within 48 hours!</strong></p>
+                `;
+                break;
+                
+            case 'safety':
+                content = `
+                    <h3>🛡️ Safety & Compliance</h3>
+                    <p>Ensure workplace safety and regulatory compliance with our comprehensive safety services.</p>
+                    
+                    <h4>Safety Services Include:</h4>
+                    <ul>
+                        <li><strong>MSDS Documentation:</strong> Complete Material Safety Data Sheets for all products</li>
+                        <li><strong>Safety Training:</strong> On-site safety training for your team</li>
+                        <li><strong>Regulatory Compliance:</strong> Guidance on local and international regulations</li>
+                        <li><strong>Emergency Procedures:</strong> Spill response and emergency protocols</li>
+                    </ul>
+                    
+                    <h4>Compliance Features:</h4>
+                    <ul>
+                        <li>OSHA compliance documentation</li>
+                        <li>International safety standards</li>
+                        <li>Regular safety audits</li>
+                        <li>Incident reporting systems</li>
+                    </ul>
+                    
+                    <p><strong>Safety first - Contact us for your compliance needs!</strong></p>
+                `;
+                break;
+                
+            case 'training':
+                content = `
+                    <h3>🎓 Product Training</h3>
+                    <p>Maximize the effectiveness and safety of your chemical applications with our expert training programs.</p>
+                    
+                    <h4>Training Programs Include:</h4>
+                    <ul>
+                        <li><strong>On-Site Training Sessions:</strong> Customized training at your facility</li>
+                        <li><strong>Technical Support:</strong> Ongoing assistance for your team</li>
+                        <li><strong>Best Practices Guidance:</strong> Industry-proven application methods</li>
+                        <li><strong>Safety Protocols:</strong> Comprehensive safety training and procedures</li>
+                    </ul>
+                    
+                    <h4>Training Benefits:</h4>
+                    <ul>
+                        <li>Improved chemical effectiveness</li>
+                        <li>Enhanced safety awareness</li>
+                        <li>Reduced operational errors</li>
+                        <li>Certified training completion</li>
+                    </ul>
+                    
+                    <p><strong>Book your training session today!</strong></p>
+                `;
+                break;
+        }
+        
+        modalContent.innerHTML = content;
+        modal.style.display = 'block';
+        
+        // Add smooth scroll to modal
+        modal.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Product Details Modal Functionality
+    function showProductDetails(productType) {
+        const modal = document.getElementById('productModal');
+        const modalContent = document.getElementById('productModalContent');
+        
+        let content = '';
+        
+        switch(productType) {
+            case 'phosphating':
+                content = `
+                    <h3>🔧 3 IN 1 PHOSPHATING CHEMICALS</h3>
+                    <p>Complete phosphating solution for metal treatment and surface preparation.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Removes Rust:</strong> Effectively removes rust and corrosion from metal surfaces.</li>
+                            <li><strong>Degreases Surface:</strong> Removes oil, grease, and other contaminants for a clean surface.</li>
+                            <li><strong>Provides Phosphating Coating:</strong> Creates a protective phosphating coating on the metal.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Available in 25kg/50kg packaging.</strong></p>
+                `;
+                break;
+            case 'paint-stripper':
+                content = `
+                    <h3>🎨 SP STRIP-X PAINT STRIPPER</h3>
+                    <p>Advanced paint stripper for multiple layers of paint, varnish, and lacquers.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Multi-layer paint removal:</strong> Can effectively remove multiple layers of paint, varnish, and lacquers.</li>
+                            <li><strong>Safe for various surfaces:</strong> Suitable for a wide range of surfaces including wood, metal, and plastic.</li>
+                            <li><strong>Fast-acting formula:</strong> Provides quick and efficient paint removal.</li>
+                            <li><strong>Environmentally friendly:</strong> Contains no harmful solvents and is biodegradable.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Available in 25L/50L packs.</strong></p>
+                `;
+                break;
+            case 'water-treatment':
+                content = `
+                    <h3>💧 WATER TREATMENT CHEMICALS</h3>
+                    <p>Comprehensive range of water treatment solutions for industrial applications.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Scale prevention:</strong> Prevents the formation of scale deposits in cooling systems and boilers.</li>
+                            <li><strong>Corrosion control:</strong> Protects metal surfaces from corrosion and pitting.</li>
+                            <li><strong>Biocide treatment:</strong> Kills and controls microorganisms that cause corrosion and scaling.</li>
+                            <li><strong>pH stabilization:</strong> Maintains optimal pH levels in water systems to prevent corrosion.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Available in 25kg/50kg packaging.</strong></p>
+                `;
+                break;
+            case 'cooling-tower':
+                content = `
+                    <h3>💧 COOLING TOWER CHEMICALS</h3>
+                    <p>Scale inhibitors, biocides, and corrosion control solutions for HVAC and industrial cooling systems.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Scale and corrosion prevention:</strong> Prevents the formation of scale deposits and corrosion on cooling tower surfaces.</li>
+                            <li><strong>Biocide treatment:</strong> Kills and controls microorganisms that cause corrosion and scaling.</li>
+                            <li><strong>Heat transfer optimization:</strong> Maintains efficient heat transfer in cooling systems.</li>
+                            <li><strong>Available in 25kg/50kg packaging:</strong> Convenient packaging for easy handling.</li>
+                        </ul>
+                    </div>
+                `;
+                break;
+            case 'boiler-treatment':
+                content = `
+                    <h3>🔧 BOILER TREATMENT CHEMICALS</h3>
+                    <p>Comprehensive solutions for boiler efficiency, corrosion protection, and scale prevention.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Oxygen scavengers:</strong> Removes oxygen from water, preventing boiler corrosion.</li>
+                            <li><strong>pH boosters and stabilizers:</strong> Adjusts and maintains optimal pH levels for efficient boiler operation.</li>
+                            <li><strong>Sludge conditioners:</strong> Helps manage and remove accumulated sludge in boilers.</li>
+                            <li><strong>High &amp; low pressure boiler compatible:</strong> Suitable for both high and low pressure boiler systems.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Available in 25kg/50kg packaging.</strong></p>
+                `;
+                break;
+            case 'ro-antiscalant':
+                content = `
+                    <h3>💧 RO ANTISCALANT CHEMICALS</h3>
+                    <p>Advanced formulations to prevent scaling and fouling in reverse osmosis membrane systems.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Membrane protection:</strong> Prevents the formation of mineral deposits on RO membranes, reducing cleaning frequency and extending membrane life.</li>
+                            <li><strong>Reduced cleaning frequency:</strong> Significantly reduces the frequency of chemical cleaning cycles.</li>
+                            <li><strong>Compatible with major RO systems:</strong> Works with a wide range of RO membrane types and configurations.</li>
+                            <li><strong>Available in 5L/25L/50L packs:</strong> Various pack sizes for different system capacities.</li>
+                        </ul>
+                    </div>
+                `;
+                break;
+            case 'paint-stripper-chemical':
+                content = `
+                    <h3>🎨 PAINT STRIPPER CHEMICAL</h3>
+                    <p>Can strip multiple layers of paint, varnish, and lacquers.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Reduce the need of sanding, grinding, hand scraping:</strong> Eliminates the need for physical sanding, grinding, or hand scraping.</li>
+                            <li><strong>Make it easy to repaint:</strong> Allows for easier and more efficient repainting of surfaces.</li>
+                            <li><strong>Available in 35kg, 50kg:</strong> Various pack sizes for different application needs.</li>
+                            <li><strong>Custom formulations available:</strong> Can be customized to meet specific paint removal requirements.</li>
+                        </ul>
+                    </div>
+                `;
+                break;
+            case 'industrial-cleaning':
+                content = `
+                    <h3>🧹 INDUSTRIAL CLEANING CHEMICALS</h3>
+                    <p>Professional-grade cleaning solutions for manufacturing and industrial facilities.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>During oil and gas production:</strong> Effective for cleaning and degreasing equipment in oil and gas production facilities.</li>
+                            <li><strong>Scale deposition in equipment:</strong> Prevents and removes scale deposits from various industrial equipment.</li>
+                            <li><strong>Pipelines and well is prevented:</strong> Prevents and removes deposits in pipelines and well casings.</li>
+                            <li><strong>Available in 25kg, 35kg, 50kg:</strong> Various pack sizes for different application needs.</li>
+                        </ul>
+                    </div>
+                `;
+                break;
+            case 'specialty-chemicals':
+                content = `
+                    <h3>🧪 SPECIALTY CHEMICAL SOLUTIONS</h3>
+                    <p>Custom chemical formulations designed for specific industrial applications and requirements.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>Custom formulations:</strong> Can be customized to meet specific chemical requirements for your application.</li>
+                            <li><strong>Application-specific solutions:</strong> Tailored to address specific challenges and problems.</li>
+                            <li><strong>Technical consultation:</strong> Provides expert guidance on chemical application and usage.</li>
+                            <li><strong>Quality assurance:</strong> Ensures the highest quality and performance of the chemical.</li>
+                        </ul>
+                    </div>
+                `;
+                break;
+            case 'international-export':
+                content = `
+                    <h3>🌍 INTERNATIONAL EXPORT</h3>
+                    <p>Export our industrial chemicals worldwide with complete documentation and compliance.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>ISO 9001:2015 Certified:</strong> Ensures high-quality manufacturing and adherence to international standards.</li>
+                            <li><strong>Complete MSDS Documentation:</strong> Comprehensive Material Safety Data Sheets for all products.</li>
+                            <li><strong>Custom Packaging Available:</strong> Can be customized to meet specific export requirements.</li>
+                            <li><strong>Export Compliance:</strong> Adherence to all necessary regulatory requirements for international trade.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Contact us for detailed export documentation and pricing!</strong></p>
+                `;
+                break;
+            case 'export-certifications':
+                content = `
+                    <h3>📋 EXPORT CERTIFICATIONS</h3>
+                    <p>All necessary certifications and documentation for international trade.</p>
+                    <div class="product-features">
+                        <ul>
+                            <li><strong>ISO Certification:</strong> Demonstrates our commitment to quality management systems.</li>
+                            <li><strong>Udyam Registration:</strong> Verified Indian business registration.</li>
+                            <li><strong>Export Licenses:</strong> Required for international trade.</li>
+                            <li><strong>Quality Certificates:</strong> Assure the highest quality of our products.</li>
+                        </ul>
+                    </div>
+                    <p><strong>Contact us for detailed export certifications and compliance!</strong></p>
+                `;
+                break;
+        }
+        
+        modalContent.innerHTML = content;
+        modal.style.display = 'block';
+        
+        // Add smooth scroll to modal
+        modal.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Product Range Details Modal Functionality
+    function showProductRangeDetails(rangeType) {
+        const modal = document.getElementById('productModal');
+        const modalContent = document.getElementById('productModalContent');
+        
+        let content = '';
+        
+        switch(rangeType) {
+            case 'pre-treatment':
+                content = `
+                    <h3>🔧 Pre-Treatment Chemicals</h3>
+                    <p>Complete range of pre-treatment solutions for metal preparation and surface treatment.</p>
+                    
+                    <h4>Product Categories:</h4>
+                    <ul>
+                        <li><strong>Phosphating Chemicals:</strong> Advanced phosphating solutions for metal treatment and surface preparation</li>
+                        <li><strong>SP Strip-X Paint Stripper:</strong> Professional paint stripper for multiple layers of paint, varnish, and lacquers</li>
+                        <li><strong>Water Treatment Chemicals:</strong> Comprehensive range of water treatment solutions for industrial applications</li>
+                    </ul>
+                    
+                    <h4>Applications:</h4>
+                    <ul>
+                        <li>Automotive industry</li>
+                        <li>Metal fabrication</li>
+                        <li>Surface preparation</li>
+                        <li>Industrial cleaning</li>
+                    </ul>
+                    
+                    <p><strong>Contact us for detailed specifications and pricing!</strong></p>
+                `;
+                break;
+                
+            case 'cooling-boiler':
+                content = `
+                    <h3>💧 Cooling & Boiler Systems</h3>
+                    <p>Specialized chemical solutions for cooling towers and boiler systems.</p>
+                    
+                    <h4>Product Categories:</h4>
+                    <ul>
+                        <li><strong>Cooling Tower Chemicals:</strong> Scale inhibitors, biocides, and corrosion control solutions</li>
+                        <li><strong>PH Booster:</strong> pH adjustment and stabilization chemicals</li>
+                        <li><strong>Corrosion Inhibitor:</strong> Advanced corrosion protection for metal surfaces</li>
+                    </ul>
+                    
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Improved heat transfer efficiency</li>
+                        <li>Extended equipment life</li>
+                        <li>Reduced maintenance costs</li>
+                        <li>Energy savings</li>
+                    </ul>
+                    
+                    <p><strong>Get expert consultation for your system requirements!</strong></p>
+                `;
+                break;
+                
+            case 'water-treatment':
+                content = `
+                    <h3>🌊 Water Treatment Solutions</h3>
+                    <p>Comprehensive water treatment chemicals for industrial and commercial applications.</p>
+                    
+                    <h4>Product Categories:</h4>
+                    <ul>
+                        <li><strong>Alkalinity Reducer:</strong> pH adjustment and alkalinity control</li>
+                        <li><strong>ALGAECIDE:</strong> Effective algae and microbial control</li>
+                        <li><strong>Oxygen Scavenger:</strong> Oxygen removal and corrosion prevention</li>
+                        <li><strong>Corrosion Preventive (Polymerized):</strong> Advanced polymer-based corrosion protection</li>
+                    </ul>
+                    
+                    <h4>Applications:</h4>
+                    <ul>
+                        <li>Cooling water systems</li>
+                        <li>Boiler feed water</li>
+                        <li>Process water treatment</li>
+                        <li>Wastewater treatment</li>
+                    </ul>
+                    
+                    <p><strong>Custom formulations available for specific applications!</strong></p>
+                `;
+                break;
+        }
+        
+        modalContent.innerHTML = content;
+        modal.style.display = 'block';
+        
+        // Add smooth scroll to modal
+        modal.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('serviceModal');
+        const closeBtn = document.querySelector('.close-modal');
+        
+        // Close modal when clicking the X button
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                modal.style.display = 'none';
+            }
+        });
+
+        const productModal = document.getElementById('productModal');
+        const productCloseBtn = document.querySelector('.close-modal');
+
+        // Close product modal when clicking the X button
+        productCloseBtn.addEventListener('click', function() {
+            productModal.style.display = 'none';
+        });
+
+        // Close product modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            if (event.target === productModal) {
+                productModal.style.display = 'none';
+            }
+        });
+
+        // Close product modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && productModal.style.display === 'block') {
+                productModal.style.display = 'none';
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Enhanced contact form handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const statusDiv = document.getElementById('formStatus');
+                
+                // Simulate form submission
+                statusDiv.textContent = 'Sending your inquiry...';
+                statusDiv.className = 'status';
+                
+                setTimeout(() => {
+                    statusDiv.textContent = 'Thank you! Your inquiry has been sent successfully. We will contact you within 24 hours.';
+                    statusDiv.className = 'status success';
+                    this.reset();
+                    
+                    // Reset status after 5 seconds
+                    setTimeout(() => {
+                        statusDiv.textContent = '';
+                        statusDiv.className = 'status';
+                    }, 5000);
+                }, 2000);
+            });
+        }
+    });
+    
+    // Add smooth scroll behavior for better navigation
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
+
+  <script>
+    // Live chemical bubbles on hero canvas
+    (function() {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let width, height, dpr;
+      function resize() {
+        dpr = window.devicePixelRatio || 1;
+        width = canvas.clientWidth;
+        height = canvas.clientHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      const bubbleColors = ['#66c2ff', '#7ee0b2', '#ffd27f'];
+      const bubbles = Array.from({ length: 30 }, () => createBubble());
+
+      function createBubble() {
+        return {
+          x: Math.random() * width,
+          y: height + Math.random() * height,
+          r: 4 + Math.random() * 10,
+          vy: 0.3 + Math.random() * 0.8,
+          vx: (Math.random() - 0.5) * 0.3,
+          color: bubbleColors[Math.floor(Math.random() * bubbleColors.length)],
+          alpha: 0.15 + Math.random() * 0.25
+        };
+      }
+
+      function step() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < bubbles.length; i++) {
+          const b = bubbles[i];
+          b.y -= b.vy;
+          b.x += b.vx + Math.sin((Date.now() * 0.001 + i) * 0.8) * 0.05;
+          if (b.y + b.r < 0) {
+            bubbles[i] = createBubble();
+            bubbles[i].y = height + bubbles[i].r;
+          }
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+          ctx.fillStyle = hexToRgba(b.color, b.alpha);
+          ctx.fill();
+          ctx.closePath();
+          // subtle highlight
+          ctx.beginPath();
+          ctx.arc(b.x - b.r * 0.3, b.y - b.r * 0.3, b.r * 0.3, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,0.15)';
+          ctx.fill();
+          ctx.closePath();
+        }
+        requestAnimationFrame(step);
+      }
+
+      function hexToRgba(hex, a) {
+        const c = hex.replace('#','');
+        const r = parseInt(c.substring(0,2),16);
+        const g = parseInt(c.substring(2,4),16);
+        const b = parseInt(c.substring(4,6),16);
+        return `rgba(${r},${g},${b},${a})`;
+      }
+
+      requestAnimationFrame(step);
+    })();
+  </script>
+</body></html>
