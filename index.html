@@ -965,6 +965,39 @@
         background-position: center;
     }
     
+    /* Udyam Highlight Section */
+    .udyam-highlight {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 3rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        border: 3px solid #3498db;
+    }
+    
+    .udyam-highlight h3 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+    
+                   .udyam-number {
+          color: #3498db;
+          font-weight: bold;
+          font-size: 1.1rem;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          display: block;
+          margin-top: 0.5rem;
+      }
+    
+    .udyam-highlight p {
+        color: #ecf0f1;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
     /* Contact Section Background */
     .contact {
         background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(233, 236, 239, 0.9)),
@@ -1105,10 +1138,10 @@
       <div class="featured-products">
         <h3 class="featured-title">Featured Solutions</h3>
         <div class="featured-grid">
-          <div class="featured-item product-card" onclick="showProductDetails('phosphating')">
-             <div class="featured-image">
-               <img src="./Soniya Enterprise — Industrial Chemicals_files/3in1-chemical.jpg" alt="3 IN 1 PHOSPHATING CHEMICALS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
-             </div>
+                     <div class="featured-item product-card" onclick="showProductDetails('phosphating')">
+              <div class="featured-image">
+                <img src="./uploads/WhatsApp Image 2025-08-25 at 09.33.21_44610a2c.jpg" alt="3 IN 1 PHOSPHATING CHEMICALS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+              </div>
              <h4>3 IN 1 PHOSPHATING CHEMICALS</h4>
              <p>Complete phosphating solution for metal treatment and surface preparation</p>
              <div class="product-features">
@@ -1413,6 +1446,10 @@
 
     <section id="certificates" class="container certificates">
       <h2>Our Certifications</h2>
+      <div class="udyam-highlight">
+        <h3>Udyam Registration Number: <span class="udyam-number">UDYAM-HR-03-0108903</span></h3>
+        <p>Official MSME Registration - Government of India</p>
+      </div>
       <div class="certificate-grid">
         <div class="iso-certificate">
           <h3>ISO 9001:2015 Certification</h3>
@@ -1449,24 +1486,23 @@
                  <p><strong>Status:</strong> Active</p>
                </div>
              </div>
-            <div class="qr-code">
-              <img src="./Soniya Enterprise — Industrial Chemicals_files/udyam-qr.png" alt="Udyam Registration QR Code" style="width: 200px; height: 200px;">
-            </div>
-            <div class="verification-tools">
-              <div class="manual-verification">
-                <h4>Manual Verification</h4>
-                <input type="text" id="udyamInput" placeholder="Enter Udyam Number" class="udyam-input">
-                <button id="verifyUdyam" class="btn btn-secondary">Verify Udyam</button>
-                <div id="verificationResult" class="verification-result"></div>
-              </div>
-              <div class="qr-scanner">
-                <h4>QR Code Scanner</h4>
-                <div id="qr-reader" class="qr-reader"></div>
-                <button id="startScanner" class="btn btn-secondary">Start Scanner</button>
-                <button id="stopScanner" class="btn btn-secondary" style="display: none;">Stop Scanner</button>
-                <div id="scannerResult" class="scanner-result"></div>
-              </div>
-            </div>
+                         <div class="verification-tools">
+               <div class="manual-verification">
+                 <h4>Manual Verification</h4>
+                 <input type="text" id="udyamInput" placeholder="Enter Udyam Number" class="udyam-input">
+                 <button id="verifyUdyam" class="btn btn-secondary">Verify Udyam</button>
+                 <div id="verificationResult" class="verification-result"></div>
+               </div>
+               <div class="qr-scanner">
+                 <h4>QR Code Scanner</h4>
+                 <div id="qr-reader" class="qr-reader">
+                   <img src="./uploads/udhyam no.certificate .jpg" alt="Udyam Registration QR Code" style="width: 100%; height: auto; max-width: 300px;">
+                 </div>
+                 <button id="startScanner" class="btn btn-secondary">Start Scanner</button>
+                 <button id="stopScanner" class="btn btn-secondary" style="display: none;">Stop Scanner</button>
+                 <div id="scannerResult" class="scanner-result"></div>
+               </div>
+             </div>
           </div>
         </div>
       </div>
@@ -2075,13 +2111,13 @@
         requestAnimationFrame(step);
       }
 
-      function hexToRgba(hex, a) {
-        const c = hex.replace('#','');
-        const r = parseInt(c.substring(0,2),16);
-        const g = parseInt(c.substring(2,4),16);
-        const b = parseInt(c.substring(4,6),16);
-        return `rgba(${r},${g},${b},${a})`;
-      }
+             function hexToRgba(hex, a) {
+         const c = hex.replace('#','');
+         const r = parseInt(c.substring(0,2),16);
+         const g = parseInt(c.substring(2,4),16);
+         const b = parseInt(c.substring(4,6),16);
+         return `rgba(${r},${g},${b},${a})`;
+       }
 
       requestAnimationFrame(step);
     })();
